@@ -36,6 +36,24 @@ a {
   font-weight: 600;
 }
 
+.button {
+  display: inline-block;
+  padding: .5em;
+  min-width: 150px;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  line-height: 1em;
+  background-color: white;
+  color: #202020;
+  cursor: pointer;
+}
+
+.button.primary {
+  background-color: dodgerblue;
+  color: white;
+}
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -49,13 +67,12 @@ strong {
 
 header {
   border-bottom: 1px solid rgb(154, 154, 154);
-  margin: 20px 0;
-  padding: 20px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
 }
 
-@media( max-width: 515px ) {
+@media(max-width: 800px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -67,7 +84,7 @@ header h1 {
   text-align: center;
 }
 
-@media( max-width: 515px ) {
+@media(max-width: 800px) {
   header h1 {
     margin-bottom: 20px;
   }
@@ -79,7 +96,7 @@ header nav {
   margin-left: 62px;
 }
 
-@media( max-width: 515px ) {
+@media(max-width: 800px) {
   header nav {
     margin-left: 0;
   }
@@ -94,30 +111,66 @@ header nav .first-anchor {
   margin-left: 0;
 }
 
-.header-img-container img {
-  width: 100%;
+.header-img-container {
+  position: relative;
+  margin-bottom: 70px;
 }
 
+.header-img-content {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-img-content h1 {
+  font-size: 5.4rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 700px) {
+  .header-img-content h1 {
+    font-size: 3.8rem;
+  }
+}
+
+@media(max-width: 700px) {
+  .cta-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons-container button {
+    max-width: 250px;
+    margin-bottom: 12px;
+  }
+}
 
 .main-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
 }
 
-@media( max-width: 515px ) {
+@media(max-width: 515px) {
   .main-content {
     flex-direction: column;
   }
 }
 
 .main-content section {
-  margin: 20px 2.5%;
-  width: 45%;
+  width: 50%;
+  padding: 0 16px;
 }
 
-@media( max-width: 515px ) {
+@media(max-width: 515px) {
   .main-content section {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -137,15 +190,7 @@ header nav .first-anchor {
 
 .book-flight-btn {
   display: block;
-  background-color: dodgerblue;
-  color: white;
   margin: 0 auto 40px;
-  cursor: pointer;
-  min-width: 200px;
-  height: 45px;
-  font-size: 2rem;
-  border-radius: 5px;
-  border: none;
 }
 
 @media(max-width: 515px) {
