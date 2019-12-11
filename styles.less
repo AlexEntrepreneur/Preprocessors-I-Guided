@@ -8,6 +8,16 @@
 @small-tablet-width: 700px;
 @mobile-width: 515px;
 
+// MIXINS
+.block-center {
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
 // STYLES
 html {
   box-sizing: border-box;
@@ -67,8 +77,8 @@ a {
 
 .container {
   max-width: 900px;
-  margin: 0 auto;
   font-size: 1.6rem;
+  .block-center();
 }
 
 strong {
@@ -92,8 +102,7 @@ header {
   }
 
   nav {
-    display: flex;
-    align-items: center;
+    .flex-center();
     margin-left: 62px;
     
     .first-anchor {
@@ -146,9 +155,8 @@ header {
 
 .cta-buttons-container {
   @media(max-width: @small-tablet-width) {
-    display: flex;
+    .flex-center();
     flex-direction: column;
-    align-items: center;
 
     button {
       max-width: 250px;
@@ -195,7 +203,8 @@ header {
 
 .book-flight-btn {
   display: block;
-  margin: 0 auto 40px;
+  .block-center();
+  margin-bottom: 40px;
 
   @media(max-width: @mobile-width) {
     width: 90%;
