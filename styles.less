@@ -134,18 +134,18 @@ header {
       font-size: 5.4rem;
       color: white;
       margin-bottom: 20px;
+
+      @media(max-width: @small-tablet-width) {
+        font-size: 3.8rem;
+      }
     }
   }
 }
 
-@media(max-width: @small-tablet-width) {
-  .header-img-content h1 {
-    font-size: 3.8rem;
-  }
-}
 
-@media(max-width: @small-tablet-width) {
-  .cta-buttons-container {
+
+.cta-buttons-container {
+  @media(max-width: @small-tablet-width) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,18 +166,14 @@ header {
   section {
     width: 50%;
     padding: 0 16px;
-  }
-}
 
-@media(max-width: @mobile-width) {
-  .main-content {
+    @media(max-width: @mobile-width) {
+      width: 100%;
+    }
+  }
+
+  @media(max-width: @mobile-width) {
     flex-direction: column;
-  }
-}
-
-@media(max-width: @mobile-width) {
-  .main-content section {
-    width: 100%;
   }
 }
 
@@ -200,12 +196,11 @@ header {
 .book-flight-btn {
   display: block;
   margin: 0 auto 40px;
-}
 
-@media(max-width: @mobile-width) {
-  .book-flight-btn {
+  @media(max-width: @mobile-width) {
     width: 90%;
     height: 50px;
     font-size: 2.5rem;
   }
 }
+
